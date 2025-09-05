@@ -1,0 +1,9 @@
+requests
+datetime
+bs4
+html2text
+urllib3
+pandas
+langchain_google_vertexai
+streamlit
+filelock
