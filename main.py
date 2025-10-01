@@ -76,7 +76,7 @@ def _is_gov_uk(link: str) -> bool:
 
 def fetch_non_govuk_snippets(stat_text: str, api_key: str, cse_id: str) -> List[Tuple[str, str, str]]:
     query = stat_text
-    items = google_cse(query, api_key, cse_id)
+s    items = google_cse(query, api_key, cse_id)
     results = []
     for it in items:
         link = it.get("link") or ""
@@ -143,8 +143,8 @@ st.set_page_config(page_title="LLM Presence Check (Non-gov.uk)", layout="centere
 st.title("🔎 Statistic Presence Check ")
 st.caption("Enter a statistic. We'll search the web and ask the LLM if the same claim appears in sources other than gov.uk.")
 
-api_key = "AIzaSyD5CbCaGtBchsZYBa7SctBrCrJ4mVIfbbo"
-cse_id = "3191bbe88242c4b42"
+# enter api_key = ""
+# enter cse_id = ""
 
 # NEW: collect user_id safely (you had it commented out but used later)
 user_id = st.text_input("Your name/email (optional)", key="user_id")  # NEW
